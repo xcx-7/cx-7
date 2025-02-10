@@ -190,7 +190,7 @@ const ChatAppModal = ({ setOpenProject }) => {
     if (now - lastClickTime < 300) {
       console.log("Double click detected! Opening Info Modal...");
       // If two clicks occur within 300ms, consider it a double-click.
-      setOpenProject("ChatApp");
+      setOpenProject("ChatAppDescription");
     }
     setLastClickTime(now);
   };
