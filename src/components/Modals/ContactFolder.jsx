@@ -9,21 +9,27 @@ import thread from "../../assets/thread.png";
 import github from "../../assets/github.png";
 import mastodon from "../../assets/mastodon.png";
 import bluesky from "../../assets/bluesky.png";
-import linkedin from "../../assets/linkedin.png";
-import youtube from "../../assets/youtube.png";
+import proton from "../../assets/proton.png";
+import discord from "../../assets/discord.png";
+// import linkedin from "../../assets/linkedin.png";
+// import youtube from "../../assets/youtube.png";
 import textFileImage from "../../assets/txtfile.png";
 
 const ContactFolder = ({ setOpenProject }) => {
   // Array of social media items with name, logo, and link.
   const socialMedia = [
-    { name: "Instagram", logo: instagram, url: "https://www.instagram.com/yourprofile" },
-    { name: "X", logo: xLogo, url: "https://twitter.com/yourprofile" },
-    { name: "Thread", logo: thread, url: "https://www.thread.com/yourprofile" },
-    { name: "GitHub", logo: github, url: "https://github.com/yourprofile" },
-    { name: "Mastodon", logo: mastodon, url: "https://mastodon.social/@yourprofile" },
-    { name: "Bluesky", logo: bluesky, url: "https://bluesky.com/yourprofile" },
-    { name: "LinkedIn", logo: linkedin, url: "https://www.linkedin.com/in/yourprofile" },
-    { name: "YouTube", logo: youtube, url: "https://www.youtube.com/yourchannel" },
+    // { name: "Instagram", logo: instagram, url: "https://www.instagram.com/cx7.here/" },
+    { name: "X", logo: xLogo, url: "https://x.com/cx7here" },
+    { name: "Thread", logo: thread, url: "https://www.threads.net/@cx7.here?hl=en" },
+    { name: "GitHub", logo: github, url: "https://github.com/xcx-7" },
+    { name: "Mastodon", logo: mastodon, url: "https://mastodon.social/@cx7" },
+    { name: "Bluesky", logo: bluesky, url: "https://bsky.app/profile/cx-7.bsky.social" },
+    { name: "Proton Mail", logo: proton, url: "cxe-7@proton.me" },
+    { name: "Discord", logo: discord, url: "https://discord.gg/yKJhF5HSrm" },
+
+
+    // { name: "LinkedIn", logo: linkedin, url: "https://www.linkedin.com/in/yourprofile" },
+    // { name: "YouTube", logo: youtube, url: "https://www.youtube.com/yourchannel" },
   ];
 
   return (

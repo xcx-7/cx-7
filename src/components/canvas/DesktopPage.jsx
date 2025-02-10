@@ -176,6 +176,9 @@ const DesktopPage = ({ onClose }) => {
       {openProject === "Cat" && (
       <CatModal setOpenProject={setOpenProject} />
       )}
+      {openProject === "ContactsFolder" && (
+        <ContactFolder setOpenProject={setOpenProject} />
+      )}
         {openProject === "ContactInfo" && (
         <ContactInfoModal setOpenProject={setOpenProject} />
       )}
