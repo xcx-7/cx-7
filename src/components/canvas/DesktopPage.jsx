@@ -122,6 +122,7 @@ const DesktopPage = ({ onClose }) => {
   const handleIconDoubleClick = (name) => {
     if (name === "Projects") setOpenFolder("Projects");
     else if (name === "about.txt") setOpenProject("AboutFile");
+    else if (name === "Contacts") setOpenProject("ContactsFolder");
     else if (name === "cat.png") setOpenProject("Cat"); 
   };
 
@@ -172,9 +173,12 @@ const DesktopPage = ({ onClose }) => {
       {openProject === "TetrisDescription" && (
         <TetrisInfoModal setOpenProject={setOpenProject} />
       )}
-{openProject === "Cat" && (
-  <CatModal setOpenProject={setOpenProject} />
-)}
+      {openProject === "Cat" && (
+      <CatModal setOpenProject={setOpenProject} />
+      )}
+        {openProject === "ContactInfo" && (
+        <ContactInfoModal setOpenProject={setOpenProject} />
+      )}
       <Taskbar onClose={onClose} />
     </div>
   );
