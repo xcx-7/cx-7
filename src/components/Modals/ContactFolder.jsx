@@ -62,7 +62,7 @@ const ContactFolder = ({ setOpenProject }) => {
           {/* Info.txt File */}
           <div
             className="flex flex-col items-center cursor-pointer"
-            onDoubleClick={() => setOpenProject("ContactInfo")}
+            onDoubleClick={() => setOpenProject(null)}
           >
             <img src={textFileImage} alt="Info.txt" className="w-16 h-16" />
             <span className="text-white text-sm">Info.txt</span>
