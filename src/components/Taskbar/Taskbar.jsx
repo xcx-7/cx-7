@@ -1,17 +1,90 @@
-// components/Taskbar/Taskbar.js
-import React from "react";
 
-const Taskbar = ({ onClose }) => {
+// // components/Taskbar.js
+// import React, { useState, useEffect } from "react";
+// import StartMenu from "./StartMenu"; // Your existing Start Menu component
+
+// const Taskbar = ({ onClose, setOpenProject }) => {
+//   const [time, setTime] = useState(new Date());
+//   const [startMenuOpen, setStartMenuOpen] = useState(false);
+
+//   useEffect(() => {
+//     const interval = setInterval(() => setTime(new Date()), 1000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   const formattedTime = time.toLocaleTimeString();
+
+//   return (
+//     <div className="fixed bottom-0 left-0 w-full h-12 bg-gray-900 flex items-center px-4 text-white">
+//       {/* Start Button */}
+//       <button
+//         className="bg-gray-800 px-4 py-1 rounded hover:bg-gray-700"
+//         onClick={() => setStartMenuOpen(!startMenuOpen)}
+//       >
+//         Start
+//       </button>
+
+//       {/* Taskbar Browser Icon */}
+//       <div
+//         className="bg-gray-700 px-4 py-1 text-white rounded-lg cursor-pointer hover:bg-gray-600 ml-4"
+//         onClick={() => setOpenProject("Browser")}
+//       >
+//         🌐 Browser
+//       </div>
+
+//       {/* Show Start Menu if Open */}
+//       {startMenuOpen && <StartMenu onClose={onClose} />}
+
+//       {/* Timer */}
+//       <div className="ml-auto text-lg font-mono">{formattedTime}</div>
+//     </div>
+//   );
+// };
+
+// export default Taskbar;
+
+
+
+// components/Taskbar.js
+import React, { useState, useEffect } from "react";
+import StartMenu from "./StartMenu";
+
+const Taskbar = ({ onClose, setOpenProject }) => {
+  const [time, setTime] = useState(new Date());
+  const [startMenuOpen, setStartMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const formattedTime = time.toLocaleTimeString();
+
   return (
-    <div className="absolute bottom-0 left-0 w-full bg-gray bg-opacity-80 h-14 flex items-center px-4">
-      <div className="flex items-center space-x-4">
-        <div className="bg-gray-800 px-3 py-1 text-white font-semibold rounded cursor-pointer hover:bg-gray-700">Start</div>
-        <div className="flex space-x-3">
-          <div className="bg-gray-700 px-4 py-1 text-white rounded-lg cursor-pointer hover:bg-gray-600">📁 Explorer</div>
-          <div className="bg-gray-700 px-4 py-1 text-white rounded-lg cursor-pointer hover:bg-gray-600">🌐 Browser</div>
-        </div>
+    <div className="fixed bottom-0 left-0 w-full h-12 bg-gray-900 flex items-center px-4 text-white">
+      {/* Start Button */}
+      <button
+        className="bg-gray-800 px-4 py-1 rounded hover:bg-gray-700"
+        onClick={() => setStartMenuOpen(!startMenuOpen)}
+      >
+        Start
+      </button>
+
+      {/* Taskbar Browser Icon */}
+      <div
+        className="bg-gray-700 px-4 py-1 text-white rounded-lg cursor-pointer hover:bg-gray-600 ml-4"
+        onClick={() => setOpenProject("Browser")}
+      >
+        🌐 Browser
       </div>
-      <button className="ml-auto bg-red-600 px-4 py-2 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700" onClick={onClose}>⏻ Exit</button>
+
+      {/* Show Start Menu if Open */}
+      {startMenuOpen && (
+        <StartMenu onClose={onClose} setOpenProject={setOpenProject} />
+      )}
+
+      {/* Timer */}
+      <div className="ml-auto text-lg font-mono">{formattedTime}</div>
     </div>
   );
 };
