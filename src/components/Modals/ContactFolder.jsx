@@ -123,7 +123,7 @@ const ContactFolder = ({ setOpenProject }) => {
           </button>
         </div>
 
-        {/* Social Media Icons + Info.txt */}
+        {/* Social Media Icons + contactInfo.txt */}
         <div className="mt-4 grid grid-cols-3 gap-4">
           {socialMedia.map((item, index) => (
             <div
