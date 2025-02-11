@@ -18,7 +18,7 @@ import textFileImage from "../../assets/txtfile.png";
 const ContactFolder = ({ setOpenProject }) => {
   // Array of social media items with name, logo, and link.
   const socialMedia = [
-    // { name: "Instagram", logo: instagram, url: "https://www.instagram.com/cx7.here/" },
+    { name: "Instagram", logo: instagram, url: "https://www.instagram.com/cx7.here/" },
     { name: "X", logo: xLogo, url: "https://x.com/cx7here" },
     { name: "Thread", logo: thread, url: "https://www.threads.net/@cx7.here?hl=en" },
     { name: "GitHub", logo: github, url: "https://github.com/xcx-7" },
