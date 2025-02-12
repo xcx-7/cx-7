@@ -343,6 +343,7 @@ import AboutModal from "../Modals/AboutModal";
 import Taskbar from "../Taskbar/Taskbar";
 import DesktopContextMenu from "../canvas/DesktopContextMenu";
 import WallpaperModal from "../Modals/WallpaperModal";
+import Notification from "../components/Notification";
 
 const DesktopPage = ({ onClose }) => {
   const [icons] = useState([
@@ -404,6 +405,7 @@ const DesktopPage = ({ onClose }) => {
       {openProject === "Calendar" && <CalendarModal setOpenProject={setOpenProject} />}
       {openProject === "TicTacToe" && <TicTacToeModal setOpenProject={setOpenProject} />}
       {openProject === "About" && <AboutModal setOpenProject={setOpenProject} />}
+      {<Notification message="Welcome to your custom desktop!" duration={4000} />}
       
       {showWallpaperModal && (
         <WallpaperModal
