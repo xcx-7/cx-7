@@ -1,73 +1,160 @@
+// // components/Modals/XenonModal.js
+// import React, { useState } from "react";
+// import Draggable from "react-draggable";
+// // Replace these with your actual assets (or reuse Chat App assets for testing)
+// import xenonLogo from "../../assets/xenon-logo.png"; 
+// import textFileImage from "../../assets/txtfile.png";
+// import xenonScreenshot from "../../assets/xenon-screenshot.png"; 
+
+// const XenonModal = ({ setOpenProject }) => {
+//   const [showImage, setShowImage] = useState(false);
+//   const [lastClickTime, setLastClickTime] = useState(0);
+
+//   // Use a custom double‑click detection for the Info.txt element
+//   const handleInfoClick = () => {
+//     const now = new Date().getTime();
+//     if (now - lastClickTime < 300) {
+//       setOpenProject("XenonDescription");
+//     }
+//     setLastClickTime(now);
+//   };
+
+//   return (
+//     <Draggable cancel=".draggable-ignore">
+//       <div className="absolute top-1/4 left-1/3 bg-gray-800 p-4 rounded-lg shadow-lg w-80 h-60 z-50">
+//         {/* Title Bar */}
+//         <div className="flex justify-between items-center border-b pb-2">
+//           <span className="text-white font-semibold">Xenon</span>
+//           <button
+//             className="text-white bg-red-500 px-2 py-1 rounded hover:bg-red-600"
+//             onClick={() => setOpenProject(null)}
+//           >
+//             ✖
+//           </button>
+//         </div>
+
+//         {/* Files inside Xenon Folder */}
+//         <div className="mt-4 grid grid-cols-3 gap-4">
+//           {/* Launch Link */}
+//           <div
+//             className="flex flex-col items-center cursor-pointer"
+//             onClick={() => window.open("https://your-xenon-url.com", "_blank")}
+//           >
+//             <img src={xenonLogo} alt="Xenon App" className="w-16 h-16" />
+//             <span className="text-white text-sm font-semibold">Xenon</span>
+//           </div>
+//           {/* Info.txt */}
+//           <div
+//             className="draggable-ignore flex flex-col items-center cursor-pointer"
+//             onClick={handleInfoClick}
+//           >
+//             <img src={textFileImage} alt="Xenon Info" className="w-16 h-16" />
+//             <span className="text-white text-sm">Info.txt</span>
+//           </div>
+//           {/* Screenshot */}
+//           <div
+//             className="flex flex-col items-center cursor-pointer"
+//             onClick={() => setShowImage(true)}
+//           >
+//             <img src={xenonScreenshot} alt="Xenon Screenshot" className="w-16 h-16" />
+//             <span className="text-white text-sm">Screenshot</span>
+//           </div>
+//         </div>
+
+//         {/* Full-screen screenshot modal */}
+//         {showImage && (
+//           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center">
+//             <div className="relative">
+//               <img
+//                 src={xenonScreenshot}
+//                 alt="Enlarged Xenon Screenshot"
+//                 className="max-w-5xl max-h-136"
+//               />
+//               <button
+//                 className="absolute top-2 right-2 text-white bg-red-500 px-2 py-1 rounded hover:bg-red-600"
+//                 onClick={() => setShowImage(false)}
+//               >
+//                 ✖
+//               </button>
+//             </div>
+//           </div>
+//         )}
+//       </div>
+//     </Draggable>
+//   );
+// };
+
+// export default XenonModal;
+
+
+
+
+
+
+
+
+
+
+
+
 // components/Modals/XenonModal.js
 import React, { useState } from "react";
 import Draggable from "react-draggable";
-// Replace these with your actual assets (or reuse Chat App assets for testing)
-import xenonLogo from "../../assets/xenon-logo.png"; 
+import xenonLogo from "../../assets/xenon-logo.png"; // Replace with your asset
 import textFileImage from "../../assets/txtfile.png";
-import xenonScreenshot from "../../assets/xenon-screenshot.png"; 
+import xenonScreenshot from "../../assets/xenon-screenshot.png"; // Replace with your asset
 
 const XenonModal = ({ setOpenProject }) => {
   const [showImage, setShowImage] = useState(false);
-  const [lastClickTime, setLastClickTime] = useState(0);
-
-  // Use a custom double‑click detection for the Info.txt element
-  const handleInfoClick = () => {
-    const now = new Date().getTime();
-    if (now - lastClickTime < 300) {
-      setOpenProject("XenonDescription");
-    }
-    setLastClickTime(now);
-  };
 
   return (
     <Draggable cancel=".draggable-ignore">
-      <div className="absolute top-1/4 left-1/3 bg-gray-800 p-4 rounded-lg shadow-lg w-80 h-60 z-50">
-        {/* Title Bar */}
-        <div className="flex justify-between items-center border-b pb-2">
-          <span className="text-white font-semibold">Xenon</span>
+      <div className="absolute top-20 left-1/3 bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-2xl shadow-2xl w-11/12 max-w-lg">
+        {/* Header */}
+        <div className="flex justify-between items-center border-b border-gray-600 pb-2">
+          <span className="text-xl font-bold text-white">Xenon</span>
           <button
-            className="text-white bg-red-500 px-2 py-1 rounded hover:bg-red-600"
+            className="text-white bg-red-500 px-3 py-1 rounded hover:bg-red-600 transition"
             onClick={() => setOpenProject(null)}
           >
             ✖
           </button>
         </div>
-
-        {/* Files inside Xenon Folder */}
+        {/* Content */}
         <div className="mt-4 grid grid-cols-3 gap-4">
-          {/* Launch Link */}
+          {/* Xenon Launcher */}
           <div
-            className="flex flex-col items-center cursor-pointer"
-            onClick={() => window.open("https://your-xenon-url.com", "_blank")}
+            className="flex flex-col items-center cursor-pointer hover:scale-105 transition transform"
+            onClick={() =>
+              window.open("https://your-xenon-url.com", "_blank")
+            }
           >
-            <img src={xenonLogo} alt="Xenon App" className="w-16 h-16" />
-            <span className="text-white text-sm font-semibold">Xenon</span>
+            <img src={xenonLogo} alt="Xenon" className="w-16 h-16" />
+            <span className="mt-1 text-white text-sm font-semibold">Xenon</span>
           </div>
           {/* Info.txt */}
           <div
-            className="draggable-ignore flex flex-col items-center cursor-pointer"
-            onClick={handleInfoClick}
+            className="draggable-ignore flex flex-col items-center cursor-pointer hover:scale-105 transition transform"
+            onDoubleClick={() => setOpenProject("XenonDescription")}
           >
-            <img src={textFileImage} alt="Xenon Info" className="w-16 h-16" />
-            <span className="text-white text-sm">Info.txt</span>
+            <img src={textFileImage} alt="Info.txt" className="w-16 h-16" />
+            <span className="mt-1 text-white text-sm">Info.txt</span>
           </div>
           {/* Screenshot */}
           <div
-            className="flex flex-col items-center cursor-pointer"
+            className="flex flex-col items-center cursor-pointer hover:scale-105 transition transform"
             onClick={() => setShowImage(true)}
           >
-            <img src={xenonScreenshot} alt="Xenon Screenshot" className="w-16 h-16" />
-            <span className="text-white text-sm">Screenshot</span>
+            <img src={xenonScreenshot} alt="Screenshot" className="w-16 h-16" />
+            <span className="mt-1 text-white text-sm">Screenshot</span>
           </div>
         </div>
-
-        {/* Full-screen screenshot modal */}
         {showImage && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center">
             <div className="relative">
               <img
                 src={xenonScreenshot}
-                alt="Enlarged Xenon Screenshot"
+                alt="Enlarged Screenshot"
                 className="max-w-5xl max-h-136"
               />
               <button
