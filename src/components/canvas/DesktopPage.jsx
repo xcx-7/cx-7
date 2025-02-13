@@ -345,8 +345,10 @@ import DesktopContextMenu from "../canvas/DesktopContextMenu";
 import WallpaperModal from "../Modals/WallpaperModal";
 // import Notification from "../components/Notification";
 import NotepadModal from "../Modals/NotepadModal";
+import PaintApp from "../Modals/PaintApp";
 import WeatherWidget from "../canvas/WeatherWidget";
 import Notification from "../canvas/Notification";
+import FileExplorer from "../Modals/FileExplorer";
 
 
 const DesktopPage = ({ onClose }) => {
@@ -410,6 +412,10 @@ const DesktopPage = ({ onClose }) => {
       {openProject === "TicTacToe" && <TicTacToeModal setOpenProject={setOpenProject} />}
       {openProject === "About" && <AboutModal setOpenProject={setOpenProject} />}
       {openProject === "Notepad" && <NotepadModal setOpenProject={setOpenProject} />}
+      {openProject === "PaintApp" && <PaintApp setOpenProject={setOpenProject} />}
+      {/* {openProject === "FileExplorer" && <FileExplorer setOpenProject={setOpenProject} />} */}
+
+
       {<Notification message="Welcome to your custom desktop!" duration={4000} />}
       
       {showWallpaperModal && (
