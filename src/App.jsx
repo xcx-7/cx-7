@@ -10,6 +10,7 @@ const App = () => {
           <Hero />
         </div>
         <div className='relative z-0'>
+          helloo
         </div>
       </div>
     </BrowserRouter>
