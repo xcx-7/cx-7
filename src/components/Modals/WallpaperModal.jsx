@@ -6,11 +6,11 @@ import wallpaper2 from "../../assets/another-bg.jpg"; // Make sure to add anothe
 import wallpaper3 from "../../assets/bg-2.jpg"; 
 import wallpaper4 from "../../assets/bg-3.jpg"; 
 import wallpaper5 from "../../assets/bg-4.jpg"; 
-import wallpaper6 from "../../assets/bg-3.jpg"; 
-import wallpaper7 from "../../assets/bg-3.jpg"; 
-import wallpaper8 from "../../assets/bg-3.jpg"; 
-import wallpaper9 from "../../assets/bg-3.jpg"; 
-
+import wallpaper6 from "../../assets/bg-5.jpg"; 
+import wallpaper7 from "../../assets/bg-6.jpg"; 
+import wallpaper8 from "../../assets/bg-7.jpg"; 
+import wallpaper9 from "../../assets/bg-8.jpg"; 
+import wallpaper10 from "../../assets/bg-9.jpg"; 
 
 
 const WallpaperModal = ({ onClose, onSelect }) => {
