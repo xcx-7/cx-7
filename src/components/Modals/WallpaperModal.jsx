@@ -79,6 +79,84 @@ const WallpaperModal = ({ onClose, onSelect }) => {
               className="w-full h-32 object-cover rounded"
             />
           </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              onSelect(wallpaper5);
+              onClose();
+            }}
+          >
+            <img
+              src={wallpaper5}
+              alt="Wallpaper 3"
+              className="w-full h-32 object-cover rounded"
+            />
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              onSelect(wallpaper6);
+              onClose();
+            }}
+          >
+            <img
+              src={wallpaper6}
+              alt="Wallpaper 3"
+              className="w-full h-32 object-cover rounded"
+            />
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              onSelect(wallpaper7);
+              onClose();
+            }}
+          >
+            <img
+              src={wallpaper7}
+              alt="Wallpaper 3"
+              className="w-full h-32 object-cover rounded"
+            />
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              onSelect(wallpaper8);
+              onClose();
+            }}
+          >
+            <img
+              src={wallpaper8}
+              alt="Wallpaper 3"
+              className="w-full h-32 object-cover rounded"
+            />
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              onSelect(wallpaper9);
+              onClose();
+            }}
+          >
+            <img
+              src={wallpaper9}
+              alt="Wallpaper 3"
+              className="w-full h-32 object-cover rounded"
+            />
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              onSelect(wallpaper10);
+              onClose();
+            }}
+          >
+            <img
+              src={wallpaper10}
+              alt="Wallpaper 3"
+              className="w-full h-32 object-cover rounded"
+            />
+          </div>
         </div>
       </div>
     </Draggable>
