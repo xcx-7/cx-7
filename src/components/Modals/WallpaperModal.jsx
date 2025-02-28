@@ -16,7 +16,7 @@ import wallpaper10 from "../../assets/bg-9.jpg";
 const WallpaperModal = ({ onClose, onSelect }) => {
   return (
     <Draggable>
-      <div className="absolute top-1/4 left-1/4 bg-gray-800 p-4 rounded-lg shadow-lg w-96 h-auto">
+      <div className="absolute top-1/4 left-0/4 bg-gray-800 p-4 rounded-lg shadow-lg w-100 h-auto">
         <div className="flex justify-between items-center border-b pb-2">
           <span className="text-white font-semibold">Choose Wallpaper</span>
           <button
@@ -26,7 +26,7 @@ const WallpaperModal = ({ onClose, onSelect }) => {
             ✖
           </button>
         </div>
-        <div className="mt-4 grid grid-cols-2 gap-4">
+        <div className="mt-9 grid grid-cols-4 gap-4">
           <div
             className="cursor-pointer"
             onClick={() => {
