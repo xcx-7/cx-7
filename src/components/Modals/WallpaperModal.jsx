@@ -61,6 +61,19 @@ const WallpaperModal = ({ onClose, onSelect }) => {
             }}
           >
             <img
+              src={wallpaper3}
+              alt="Wallpaper 3"
+              className="w-full h-32 object-cover rounded"
+            />
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              onSelect(wallpaper4);
+              onClose();
+            }}
+          >
+            <img
               src={wallpaper4}
               alt="Wallpaper 3"
               className="w-full h-32 object-cover rounded"
