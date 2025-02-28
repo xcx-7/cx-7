@@ -3,7 +3,16 @@ import React from "react";
 import Draggable from "react-draggable";
 import wallpaper1 from "../../assets/bg.jpg";
 import wallpaper2 from "../../assets/another-bg.jpg"; // Make sure to add another wallpaper in your assets
-import wallpaper3 from "../../assets/another-bg.jpg"; 
+import wallpaper3 from "../../assets/bg-2.jpg"; 
+import wallpaper4 from "../../assets/bg-3.jpg"; 
+import wallpaper5 from "../../assets/bg-4.jpg"; 
+import wallpaper6 from "../../assets/bg-3.jpg"; 
+import wallpaper7 from "../../assets/bg-3.jpg"; 
+import wallpaper8 from "../../assets/bg-3.jpg"; 
+import wallpaper9 from "../../assets/bg-3.jpg"; 
+
+
+
 const WallpaperModal = ({ onClose, onSelect }) => {
   return (
     <Draggable>
@@ -47,12 +56,12 @@ const WallpaperModal = ({ onClose, onSelect }) => {
           <div
             className="cursor-pointer"
             onClick={() => {
-              onSelect(wallpaper2);
+              onSelect(wallpaper3);
               onClose();
             }}
           >
             <img
-              src={wallpaper2}
+              src={wallpaper4}
               alt="Wallpaper 3"
               className="w-full h-32 object-cover rounded"
             />
