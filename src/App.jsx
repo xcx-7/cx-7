@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
+import { HashRouter  } from "react-router-dom";
+
 import { Hero } from "./components";
 
 const App = () => {
@@ -44,14 +46,14 @@ const App = () => {
 
   // Normal desktop view
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Hero />
         </div>
         <div className="relative z-0">{/* Additional components or routes */}</div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
