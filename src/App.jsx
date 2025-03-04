@@ -30,7 +30,7 @@ const App = () => {
             If you wanna see this, please open it on a desktop or laptop.  
             Otherwise, check out my second portfolio{" "}
             <a
-              href="https://your-second-portfolio-link.com"
+              href="https://xcx-7.github.io/cx7here/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 font-semibold hover:underline"
