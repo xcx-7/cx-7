@@ -29,7 +29,7 @@ const TetrisModal = ({ setOpenProject }) => {
           <div
             className="flex flex-col items-center cursor-pointer hover:scale-105 transition transform"
             onClick={() =>
-              window.open("https://your-tetris-url.com", "_blank")
+              window.open("https://tetriscx7.netlify.app/", "_blank")
             }
           >
             <img src={tetrisLogo} alt="Tetris" className="w-16 h-16" />

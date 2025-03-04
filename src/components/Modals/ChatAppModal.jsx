@@ -27,7 +27,7 @@ const ChatAppModal = ({ setOpenProject }) => {
           <div
             className="flex flex-col items-center cursor-pointer hover:scale-105 transition transform"
             onClick={() =>
-              window.open("https://your-chatapp-url.com", "_blank")
+              window.open("https://kona-a8bn.onrender.com/", "_blank")
             }
           >
             <img src={chatAppLogo} alt="Chat App" className="w-16 h-16" />

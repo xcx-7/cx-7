@@ -29,7 +29,7 @@ const SteganographyModal = ({ setOpenProject }) => {
           <div
             className="flex flex-col items-center cursor-pointer hover:scale-105 transition transform"
             onClick={() =>
-              window.open("https://your-steganography-url.com", "_blank")
+              window.open("https://steganographyliv.netlify.app/", "_blank")
             }
           >
             <img src={steganographyLogo} alt="Steganography" className="w-16 h-16" />
